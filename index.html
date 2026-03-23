@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>DreamSync 🌙</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- For graph -->
+</head>
+
+<body>
+
+<div class="sky">
+  <div class="stars"></div>
+</div>
+
+<h1 class="title">DreamSync 🌙</h1>
+
+<div class="dateBox">
+  <label>Date</label>
+  <input type="date" id="entryDate">
+</div>
+
+<div class="container">
+
+  <div class="panel girl">
+    <h2>Princess ❤️</h2>
+    <img class="avatar" src="her.png">
+    <label>Sleep Time</label>
+    <input type="time" id="herSleep" step="60">
+    <label>Wake Time</label>
+    <input type="time" id="herWake" step="60">
+    <button id="herBtn">Save ❤️</button>
+    <div class="score" id="herScore"></div>
+    <div class="hearts" id="heartsHer"></div>
+  </div>
+
+  <div class="panel you">
+    <h2>Prince 💜</h2>
+    <img class="avatar" src="his.png">
+    <label>Sleep Time</label>
+    <input type="time" id="yourSleep" step="60">
+    <label>Wake Time</label>
+    <input type="time" id="yourWake" step="60">
+    <button id="yourBtn">Save 💜</button>
+    <div class="score" id="yourScore"></div>
+    <div class="hearts" id="heartsYou"></div>
+  </div>
+
+</div>
+
+<h2 class="winner" id="winnerBadge"></h2>
+
+<h2 class="historyTitle">Sleep History & Score Comparison</h2>
+<table id="historyTable">
+<thead>
+<tr>
+<th>Date</th>
+<th>Her Score</th>
+<th>Your Score</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+
+<canvas id="scoreChart" width="600" height="200"></canvas>
+
+<!-- Firebase (compat) SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+<script src="script.js"></script>
+</body>
+</html>
